@@ -6,7 +6,7 @@ fn main() {
     println!("cargo:rustc-link-lib=static=SimConnect");
 
     let bindings = bindgen::Builder::default()
-        .header("sim_connect_cpp/include/SimConnect.h")
+        .header("sim_connect_cpp/include/SimConnect.hpp")
         .generate()
         .expect("Unable to generate bindings");
 
