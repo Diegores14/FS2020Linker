@@ -7,6 +7,7 @@ fn main() {
 
     let bindings = bindgen::Builder::default()
         .header("sim_connect_cpp/include/SimConnect.hpp")
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()
         .expect("Unable to generate bindings");
 
